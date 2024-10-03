@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Brinquedos de Madeira</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Brinquedos de Madeira</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Produtos Section -->
+    <section class="products-section py-5">
+        <div class="container">
+            <h2 class="text-center">Nossos Produtos</h2>
+            <div class="row">
+                <!-- Produto 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                       
+                        <div class="card-body">
+                            <h5 class="card-title">Balanço de carrinho de madeira</h5>
+                            <p class="card-text">Indicado para crianças até 3 anos
+                                O Balanço de Carrinho de Madeira é um brinquedo artesanal encantador que proporciona diversão e estímulo ao desenvolvimento motor das crianças. Feito à mão com madeira de alta qualidade, esse balanço possui o formato de um carrinho, ideal para crianças pequenas. Seu design seguro e confortável oferece estabilidade durante o uso, garantindo momentos de alegria ao ar livre ou dentro de casa. Além de entreter, o balanço contribui para o equilíbrio e a coordenação motora, tornando-se um excelente presente para estimular a criatividade e a imaginação dos pequenos..</p>
+                            <!-- Adicionando vídeo para Produto 1 -->
+                            <video width="100%" controls>
+                                <source src="videosprodutoX.mp4.mp4" type="video/mp4">
+                                Seu navegador não suporta a tag de vídeo.
+                            </video>
+                            <a href="#" class="btn btn-primary mt-3">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">Produto 2</h5>
+                            <p class="card-text">Descrição do produto 2.</p>
+                            <!-- Adicionando vídeo para Produto 2 -->
+                            <video width="100%" controls>
+                                <source src="videos/produto2.mp4" type="video/mp4">
+                                Seu navegador não suporta a tag de vídeo.
+                            </video>
+                            <a href="#" class="btn btn-primary mt-3">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Produto 3</h5>
+                            <p class="card-text">Descrição do produto 3.</p>
+                            <!-- Adicionando vídeo para Produto 3 -->
+                            <video width="100%" controls>
+                                <source src="videos/produto3.mp4" type="video/mp4">
+                                Seu navegador não suporta a tag de vídeo.
+                            </video>
+                            <a href="#" class="btn btn-primary mt-3">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <<footer class="footer-section py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Brinquedos de Madeira. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                               <!--colocar link do instagram-->
+                <a href="#" onclick="redirectToSocial('https://www.instagram.com/pontoo.luz')">
+                    Instagram 
+                    <img src="https://static.vecteezy.com/system/resources/previews/018/930/691/non_2x/instagram-logo-instagram-icon-transparent-free-png.png" alt="Instagram" width="350" height="50">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Função para redirecionar para redes sociais
+        function redirectToSocial(url) {
+            window.open(url, '_blank'); // Abre o link em uma nova aba
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

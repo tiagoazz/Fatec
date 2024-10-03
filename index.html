@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brinquedos de Madeira - Feitos à Mão</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Brinquedos de Madeira</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="Principal" class="Princial-section text-center">
+        <div class="container">
+            <h1>Brinquedos de Madeira Feitos à Mão</h1>
+            <p>Para o desenvolvimento e diversão de todas as crianças!</p>
+            <a href="products.html" class="btn btn-primary">Ver Produtos</a>
+            <a href="blog.html" class="btn btn-secondary">Leia nosso Blog</a>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <h2 class="text-center">Sobre Nós</h2>
+            <p class="text-center">Nós criamos brinquedos artesanais de madeira para auxiliar no desenvolvimento das crianças, incluindo crianças com necessidades especiais e superdotadas.</p>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="products" class="products-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Nossos Produtos</h2>
+            <p class="text-center">Explore nossa coleção de brinquedos feitos à mão.</p>
+            <a href="products.html" class="btn btn-primary">Ver Todos os Produtos</a>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="blog-section py-5">
+        <div class="container">
+            <h2 class="text-center">Blog</h2>
+            <p class="text-center">Confira dicas e novidades sobre brinquedos e desenvolvimento infantil.</p>
+            <a href="blog.html" class="btn btn-secondary">Visite nosso Blog</a>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="contact-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Contato</h2>
+            <p class="text-center">Estamos aqui para ajudar! Entre em contato conosco.</p>
+            <a href="contact.html" class="btn btn-primary">Entre em Contato</a>
+            <!-- Botão WhatsApp -->
+            <div class="whatsapp-button">
+                <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Brinquedos de Madeira. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                               <!--colocar link do instagram-->
+                <a href="#" onclick="redirectToSocial('https://www.instagram.com/pontoo.luz')">
+                    Instagram 
+                    <img src="https://static.vecteezy.com/system/resources/previews/018/930/691/non_2x/instagram-logo-instagram-icon-transparent-free-png.png" alt="Instagram" width="350" height="50">
+                </a>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Função para redirecionar para redes sociais
+        function redirectToSocial(url) {
+            window.open(url, '_blank'); // Abre o link em uma nova aba
+        }
+    </script>
+</body>
+</html>
