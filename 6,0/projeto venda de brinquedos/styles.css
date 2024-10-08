@@ -1,0 +1,218 @@
+body {
+
+
+   
+        text-align:center;
+        background-color:#ffcc8e;
+      }
+      
+      .button{
+        position:relative;
+        display:inline-block;
+        margin:20px;
+      }
+      
+      .button a{
+        color:white;
+        font-family:Helvetica, sans-serif;
+        font-weight:bold;
+        font-size:36px;
+        text-align: center;
+        text-decoration:none;
+        background-color:#FFA12B;
+        display:block;
+        position:relative;
+        padding:20px 40px;
+        
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        text-shadow: 0px 1px 0px #000;
+        filter: dropshadow(color=#000, offx=0px, offy=1px);
+        
+        -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+        -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+        box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+        
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+      
+      .button a:active{
+        top:10px;
+        background-color:#F78900;
+        
+        -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+        -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+        box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+      }
+      
+      .button:after{
+        content:"";
+        height:100%;
+        width:100%;
+        padding:4px;
+        position: absolute;
+        bottom:-15px;
+        left:-4px;
+        z-index:-1;
+        background-color:#2B1800;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      
+    
+
+
+
+
+    
+    font-family: 'Arial', sans-serif; /* Fonte padrão do site */
+    margin: 0; /* Remover margens padrão */
+    padding: 0; /* Remover espaçamento padrão */
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem; /* Tamanho da fonte da marca */
+    color: #654321; /* Cor marrom de madeira */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transição suave para mudança de cor e transformação */
+}
+
+.navbar-brand:hover {
+    color: #8B4513; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumentar levemente ao passar o mouse */
+}
+
+/* Seção Inicial (Home) */
+.home-section {
+    background-image: url('wood-background.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Cobrir toda a área da seção */
+    color: white; /* Cor do texto */
+    padding: 100px 0; /* Espaçamento interno */
+    opacity: 0.9; /* Opacidade */
+    animation: fadeIn 1s ease-in; /* Animação de entrada */
+}
+
+/* Keyframes para animação de fadeIn */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Seções About e Products */
+.about-section,
+.products-section {
+    padding: 60px 0; /* Espaçamento interno */
+}
+
+/* Cartão de Produto */
+.product-card {
+    border: 1px solid #ddd; /* Borda do cartão */
+    padding: 15px; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    background-color: #f9f9f9; /* Cor de fundo do cartão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor do cartão */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformação e sombra */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Levantar o cartão ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Botão de Produto */
+.product-card .button {
+    background-color: var(--main-color); /* Usar a variável de cor principal */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remover borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para cor de fundo e transformação */
+}
+
+.product-card .button:hover {
+    background-color: #8B4513; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumentar tamanho ao passar o mouse */
+}
+
+/* Seção de Rodapé */
+.footer-section {
+    background-color: #654321; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto */
+    padding: 20px 0; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+}
+
+/* Ícones de redes sociais no rodapé */
+.footer-section .social-icons img {
+    width: 30px; /* Largura dos ícones */
+    margin: 0 10px; /* Margem entre ícones */
+    transition: transform 0.3s ease; /* Transição suave para transformação */
+}
+
+.footer-section .social-icons img:hover {
+    transform: scale(1.1); /* Aumentar ícone ao passar o mouse */
+}
+
+/* Estilo de Gradiente */
+.gradient-background {
+    background: linear-gradient(to right, #a0522d, #654321); /* Gradiente linear */
+}
+
+/* Estilos de texto */
+.text {
+    word-wrap: break-word; /* Quebra de palavras longas */
+    word-break: break-all; /* Quebra de palavras em qualquer ponto */
+    white-space: normal; /* Permite que o texto quebre em múltiplas linhas */
+}
+
+/* Variáveis CSS */
+:root {
+    --main-color: #654321; /* Cor principal do site */
+}
+
+/* Exemplo de utilização de variáveis */
+.button {
+    background-color: var(--main-color); /* Usar a variável */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remover borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave para cor de fundo */
+}
+
+.button:hover {
+    background-color: #8B4513; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumentar tamanho ao passar o mouse */
+}
+
+/* Estilo para elementos focados */
+.button:focus, .navbar-brand:focus {
+    outline: none; /* Remover contorno padrão */
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.5); /* Sombra ao redor do elemento focado */
+}
+
+
+/* Faz a imagem de 'brinquedos educativos especial' ocupar a tela toda */
+#brinquedos-educativos-especial img {
+    width: 100vw; /* Ocupe 100% da largura da tela */
+    height: 100vh; /* Ocupe 100% da altura da tela */
+    object-fit: cover; /* Ajuste a imagem sem distorção */
+    display: block; /* Remove possíveis margens */
+    margin: 0;
+}
+.text-canto-superior {
+    position: absolute;
+    top: 10px; /* ajusta a distância do topo */
+    left: 10px; /* ajusta a distância da esquerda */
+    z-index: 100; /* garante que o texto fique na frente de outros elementos */
+    color: white; /* cor do texto */
+    font-size: 1.5rem; /* tamanho da fonte */
+    font-weight: bold; /* deixa o texto em negrito */
+}
+
+
+
