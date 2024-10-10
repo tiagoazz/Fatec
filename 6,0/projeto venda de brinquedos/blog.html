@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante a responsividade da página -->
+    <title>Blog - Brinquedos de Madeira</title>
+    <!-- Link para o Bootstrap, facilitando a criação de um layout responsivo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos básicos para as imagens dos posts */
+        .blog-image {
+            width: 100%; /* As imagens ocuparão 100% da largura do container */
+            height: 250px; /* Define uma altura fixa para as imagens */
+            object-fit: cover; /* Faz com que a imagem se ajuste sem distorção */
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (barra de navegação) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="imagens/logo.png" alt="Logo Brinquedos de Madeira" class="logo"></a> <!-- Logo da empresa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- Ícone de "menu" para mobile -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> <!-- Itens de navegação alinhados à direita -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção do Blog -->
+    <section class="blog-section py-5">
+        <div class="container">
+            <h2 class="text-center">Nosso Blog</h2>
+            <div class="row">
+                <!-- Postagem 1 -->
+                <div class="col-md-4 mb-4">
+                    <article>
+                        <img src="https://source.unsplash.com/800x600/?wooden-toys" alt="Brinquedos de madeira" class="blog-image">
+                        <h3 class="mt-3">Dicas de Brincadeiras com Brinquedos de Madeira</h3>
+                        <p>Descubra como os brinquedos de madeira podem ajudar no desenvolvimento das crianças através de brincadeiras educativas.</p>
+                        <!-- Botão "Leia Mais" que abre o modal correspondente -->
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalPost1">Leia Mais</button>
+                    </article>
+                </div>
+
+                <!-- Postagem 2 -->
+                <div class="col-md-4 mb-4">
+                    <article>
+                        <img src="https://source.unsplash.com/800x600/?handmade-toys" alt="Brinquedos artesanais" class="blog-image">
+                        <h3 class="mt-3">Os Benefícios dos Brinquedos Artesanais</h3>
+                        <p>Saiba por que optar por brinquedos feitos à mão é uma escolha consciente e sustentável para o desenvolvimento infantil.</p>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalPost2">Leia Mais</button>
+                    </article>
+                </div>
+
+                <!-- Postagem 3 -->
+                <div class="col-md-4 mb-4">
+                    <article>
+                        <img src="https://source.unsplash.com/800x600/?educational-toys" alt="Brinquedos educativos" class="blog-image">
+                        <h3 class="mt-3">Brinquedos Educativos: O Poder do Aprendizado Lúdico</h3>
+                        <p>Entenda como os brinquedos educativos podem estimular a criatividade e o aprendizado das crianças.</p>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalPost3">Leia Mais</button>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para Postagem 1 -->
+    <div class="modal fade" id="modalPost1" tabindex="-1" aria-labelledby="modalPost1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPost1Label">Dicas de Brincadeiras com Brinquedos de Madeira</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/800x600/?wooden-toys" alt="Brinquedos de madeira" class="blog-image mb-3">
+                    <p>Os brinquedos de madeira oferecem uma infinidade de opções para brincadeiras criativas. Eles incentivam o desenvolvimento cognitivo e motor das crianças, enquanto promovem a interação social e a imaginação. Neste artigo, exploraremos diversas maneiras de usar esses brinquedos em atividades lúdicas e educativas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Postagem 2 -->
+    <div class="modal fade" id="modalPost2" tabindex="-1" aria-labelledby="modalPost2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPost2Label">Os Benefícios dos Brinquedos Artesanais</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/800x600/?handmade-toys" alt="Brinquedos artesanais" class="blog-image mb-3">
+                    <p>Brinquedos feitos à mão são conhecidos por sua durabilidade e pela atenção aos detalhes. Além de serem mais sustentáveis, eles ajudam as crianças a desenvolverem um senso de valor, ao entenderem a importância da criação artesanal. Neste artigo, discutimos como esses brinquedos podem se tornar uma parte importante do desenvolvimento das crianças.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Postagem 3 -->
+    <div class="modal fade" id="modalPost3" tabindex="-1" aria-labelledby="modalPost3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPost3Label">Brinquedos Educativos: O Poder do Aprendizado Lúdico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/800x600/?educational-toys" alt="Brinquedos educativos" class="blog-image mb-3">
+                    <p>Os brinquedos educativos são ferramentas valiosas no processo de aprendizado das crianças. Eles não apenas ajudam a desenvolver habilidades cognitivas, mas também promovem a socialização e o aprendizado emocional. Neste artigo, exploramos o impacto desses brinquedos no desenvolvimento infantil.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
