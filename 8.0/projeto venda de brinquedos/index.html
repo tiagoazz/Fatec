@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brinquedos Educativos Especiais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos gerais para o corpo do site */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Estilo da seção principal com a imagem de fundo */
+        .hero-section {
+            display: flex; /* Permite alinhamento dos elementos dentro da seção */
+            align-items: flex-start; /* Alinha os itens na parte superior da seção */
+            justify-content: flex-start; /* Alinha os itens no início da seção */
+            height: 100vh; /* A seção ocupa toda a altura da tela */
+            background-image: url('./imagens/ImagenBriquedos.jpeg'); /* Define a imagem de fundo */
+            background-size: cover; /* A imagem cobre toda a área */
+            background-position: center; /* Centra a imagem no fundo */
+            background-repeat: no-repeat; /* Impede repetição da imagem */
+            color: rgb(249, 249, 249); /* Define a cor do texto */
+            position: relative; /* Permite posicionar elementos em relação a outros elementos */
+            padding-top: 700px; /* Espaçamento superior */
+            padding-left: 100px; /* Espaçamento esquerdo */
+        }
+
+        /* Efeito de sobreposição de cor por cima da imagem */
+        .hero-section::before {
+            content: ''; /* Cria um elemento vazio */
+            position: absolute; /* Posicionamento absoluto */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Cor preta transparente */
+            z-index: 1; /* Define a ordem de sobreposição */
+        }
+
+        /* Estilos para o conteúdo do texto na esquerda */
+        .hero-text {
+            position: absolute; /* Posicionamento absoluto */
+            top: 0%;
+            z-index: 10; /* Define a ordem de sobreposição */
+            max-width: 1000px; /* Define a largura máxima do texto */
+            padding: 50px; /* Espaçamento interno */
+        }
+
+        /* Estilos para o título (h1) */
+        .hero-text h1 {
+            font-size: 3rem; /* Tamanho da fonte */
+            font-weight: bold; /* Estilo da fonte em negrito */
+        }
+
+        /* Estilos para o parágrafo (p) */
+        .hero-text p {
+            font-size: 1.2rem; /* Tamanho da fonte */
+            margin-bottom: 50px; /* Espaçamento inferior */
+        }
+
+        /* Estilos para dispositivos móveis (tela menor que 768 pixels) */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column; /* Mudança na direção dos elementos */
+                text-align: center; /* Centraliza o texto */
+                padding-top: 20px; /* Ajusta o espaçamento superior */
+                padding-left: 0; /* Remove o espaçamento esquerdo */
+            }
+
+            .hero-text {
+                max-width: 50%; /* Ajusta a largura máxima do texto */
+                padding: 10px; /* Ajusta o espaçamento interno */
+            }
+        }
+
+        /* Estilos para o menu de navegação */
+        .navbar-nav a {
+            color: white; /* Define a cor do texto do menu */
+            margin-right: 15px; /* Espaçamento entre os itens do menu */
+            text-decoration: none; /* Remove a decoração do texto */
+            font-weight: bold; /* Estilo da fonte em negrito */
+        }
+
+        /* Estilo do menu de navegação quando o mouse está sobre ele */
+        .navbar-nav a:hover {
+            text-decoration: underline; /* Adiciona um sublinhado ao texto */
+        }
+
+        /* Estilos para as seções adicionais */
+        .bg-brown {
+            background-color: #A0522D; /* Define a cor de fundo marrom */
+        }
+
+        /* Estilos para o título da seção "Transforma Vidas" */
+        .section-transforma-vidas h2 {
+            font-size: 2.5rem; /* Tamanho da fonte */
+            font-weight: bold; /* Estilo da fonte em negrito */
+        }
+
+        /* Estilos para os parágrafos das seções "Transforma Vidas" e "Brinquedos Educativos" */
+        .section-transforma-vidas p,
+        .section-brinquedos-educativos p {
+            font-size: 1.2rem; /* Tamanho da fonte */
+            margin-bottom: 20px; /* Espaçamento inferior */
+        }
+
+        /* Estilos para os cards (elementos de conteúdo) */
+        .card {
+            border: none; /* Remove a borda do card */
+            background-color: #ffffff; /* Define a cor de fundo do card */
+        }
+
+        /* Estilos para o conteúdo do card */
+        .card-body {
+            padding: 10px; /* Espaçamento interno */
+        }
+
+        /* Estilos para as imagens */
+        .img-fluid {
+            border-radius: 8px; /* Arredonda os cantos da imagem */
+            margin-top: 15px; /* Espaçamento superior */
+        }
+
+        /* Estilos para o botão primário */
+        .btn-primary {
+            background-color: #007bff; /* Define a cor de fundo do botão */
+            border: none; /* Remove a borda */
+            padding: 10px 20px; /* Espaçamento interno */
+            border-radius: 5px; /* Arredonda os cantos do botão */
+            color: #fff; /* Define a cor do texto do botão */
+            text-decoration: none; /* Remove a decoração do texto */
+        }
+
+        /* Estilos para o botão primário quando o mouse está sobre ele */
+        .btn-primary:hover {
+            background-color: #0056b3; /* Define a cor de fundo do botão ao passar o mouse */
+        }
+
+        /* Estilos para o botão "Leia Mais" */
+        .btn-leia-mais {
+            background-color: #007bff; /* Define a cor de fundo do botão */
+            border: none; /* Remove a borda */
+            padding: 10px 20px; /* Espaçamento interno */
+            border-radius: 5px; /* Arredonda os cantos do botão */
+            color: #fff; /* Define a cor do texto do botão */
+            cursor: pointer; /* Define o cursor do mouse */
+            margin-top: 15px; /* Espaçamento superior */
+        }
+
+        /* Estilos para o botão "Leia Mais" quando o mouse está sobre ele */
+        .btn-leia-mais:hover {
+            background-color: #0056b3; /* Define a cor de fundo do botão ao passar o mouse */
+        }
+
+        /* Estilos para o texto extra oculto */
+        .text-completo {
+            display: none; /* Oculta o texto inicialmente */
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Caixa de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#"></a> <!-- Substitua pelo nome da sua marca ou logo -->
+            <div class="logo">
+                <img src="imagens/Sem título.png" alt="logo"width="60" height="60">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção principal com imagem de fundo -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Brinquedos Educativos Especiais</h1>
+            <p>Descubra como nossos brinquedos ajudam crianças especiais e superdotadas a aprender e crescer.</p>
+            <p>Para saber mais sobre nossos produtos, 
+                <div>
+                    <a href="products.html" class="btn btn-special">Conheça nossos produtos</a>
+                    <a href="contact.html" class="btn btn-outline-special">Entre em contato</a>
+                </div>
+            </div>
+            </p> 
+        </div>
+    </section>
+
+    <!-- Segunda tela do site -->
+    <section class="section-transforma-vidas">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2>Brinquedos que transformam vidas</h2>
+                    <p>
+                        Na Ponto Luz, oferecemos brinquedos educativos de madeira que ajudam crianças especiais e superdotadas a desenvolver suas habilidades de forma lúdica e significativa.
+                        <span id="text-completo" class="text-completo">
+                            Nossos brinquedos são projetados para melhorar habilidades motoras, sociais e cognitivas. Cada brinquedo é cuidadosamente desenvolvido para estimular a criatividade e incentivar o aprendizado de uma maneira divertida e inovadora.
+                        </span>
+                    </p>
+                    <button id="btn-leia-mais" class="btn-leia-mais" onclick="mostrarMais()">Saiba mais...</button>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="./imagens/img2parte.jpeg" alt="Boneco de madeira" class="img-fluid rounded">
+                    <div class="mt-4 bg-brown text-white p-3 rounded">
+                        <div class="row">
+                            <div class="col">
+                                <h3>150+</h3>
+                                <p>Apoio contínuo</p>
+                            </div>
+                            <div class="col">
+                                <h3>15</h3>
+                                <p>Qualidade garantida</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte 3 do site -->
+    <section class="section-brinquedos-educativos py-5">
+        <div class="container">
+            <h2 class="text-center">Brinquedos Educativos</h2>
+            <p class="text-center">Desenvolvemos brinquedos que ajudam crianças especiais e superdotadas a aprender e se divertir.</p>
+            <div class="row mt-5">
+                <!-- Primeira coluna -->
+                <div class="col-lg-6 d-flex flex-column align-items-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Contato e Suporte</h3>
+                            <p>Estamos aqui para ajudar! Entre em contato para mais informações sobre nossos produtos e serviços.</p>
+                        </div>
+                        <img src="./imagens/imgparte3suporte.jpeg" class="img-fluid" alt="Imagem de brinquedos de suporte">
+                    </div>
+                </div>
+
+                <!-- Segunda coluna -->
+                <div class="col-lg-6 d-flex flex-column align-items-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Benefícios dos Brinquedos</h3>
+                            <p>Cada brinquedo é projetado para estimular habilidades e promover o desenvolvimento infantil de forma lúdica.</p>
+                        </div>
+                        <img src="./imagens/brinquedoquadrado.png" class="img-fluid" alt="Imagem de brinquedos educativos">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script para funcionalidade do botão "Saiba Mais" -->
+    <script>
+        function mostrarMais() {
+            var textoCompleto = document.getElementById("text-completo");
+            var botao = document.getElementById("btn-leia-mais");
+
+            // Alternar visibilidade do texto completo
+            if (textoCompleto.style.display === "none") {
+                textoCompleto.style.display = "inline"; // Mostra o texto
+                botao.innerHTML = "Mostrar menos"; // Altera o texto do botão
+            } else {
+                textoCompleto.style.display = "none"; // Esconde o texto
+                botao.innerHTML = "Saiba mais..."; // Restaura o texto do botão
+            }
+        }
+    </script>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Brinquedos Educativos Especiais. Todos os direitos reservados.</p>
+        <a href="contact.html" class="text-white">Contato</a> | 
+        <a href="https://www.instagram.com/pontoo.luz" class="text-white">Instagram</a> |
+    </footer>
+</body>
+</html>
