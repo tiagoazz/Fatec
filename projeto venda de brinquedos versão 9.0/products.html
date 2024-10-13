@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Brinquedos de Madeira</title>
+    <!-- Link para o Bootstrap para facilitar o layout responsivo e estilização -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Identidade visual atualizada */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            background-image: url('imagens/ImagenBriquedos.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            transition: background 0.5s ease;
+        }
+
+        /* Navbar estilizada */
+        .navbar {
+            background-color: #593E25;
+        }
+
+        .navbar .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link:hover {
+            color: #f0c14b;
+        }
+
+        /* Seção de produtos */
+        .products-section h2 {
+            color: #593E25;
+            margin-bottom: 40px;
+        }
+
+        /* Estilos dos cards de produto */
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Personalização dos botões de compra via WhatsApp */
+        .btn-whatsapp {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg') no-repeat center;
+            background-size: cover;
+            border: none;
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* Botão flutuante do WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg') no-repeat center;
+            background-size: cover;
+            border: none;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilo do rodapé */
+        .footer-section {
+            background-color: #593E25;
+            color: white;
+        }
+
+        .social-icons img {
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Slider de imagens */
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .products-section h2 {
+            color: rgb(5, 0, 0) !important; /* Uma cor contrastante, como branca */
+            margin-bottom: 40px;
+        }
+
+        .Logo {
+            width: 70px;
+            height: auto;
+            border-radius: 51%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"></a> <img src="imagnes de logo/logo escura marro.webp" alt="Logo Brinquedos de Madeira" class="Logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="products.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contatos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção de Produtos -->
+    <section class="products-section py-5">
+        <div class="container">
+            <h2 class="text-center">Nossos Produtos</h2>
+            <div class="row">
+                <!-- Produto com Slider de Imagens no lugar do GIF -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Produto com Slider de Imagens</h5>
+                            <p class="card-text">Descrição do produto com slider de imagens no lugar do GIF.</p>
+                            <div id="carouselExampleControlsGif" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imagens produtos/exemplo1.png" alt="Imagem 1 do produto">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens produtos/exemplo2.png" alt="Imagem 2 do produto">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens produtos/exemplo3.png" alt="Imagem 3 do produto">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsGif" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsGif" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <!-- Botão de compra via WhatsApp -->
+                            <a href="https://wa.me/SUANUMERO?text=Olá, gostaria de comprar o produto Produto com Slider de Imagens" class="btn-whatsapp mt-3" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto com Slider de Imagens -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Produto com Imagens</h5>
+                            <p class="card-text">Descrição do produto com slider de imagens.</p>
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imagens produtos/Catapulta de madeira.png" alt="Imagem 1 do produto">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens produtos/jogo de peças.png" alt="Imagem 2 do produto">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens produtos/jogo do elefante.png" alt="Imagem 3 do produto">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <!-- Botão de compra via WhatsApp -->
+                            <a href="https://wa.me/SUANUMERO?text=Olá, gostaria de comprar o produto Produto com Imagens" class="btn-whatsapp mt-3" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto com Vídeo -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Produto com Slider</h5>
+                            <p class="card-text">Descrição do produto com slider de imagens no lugar do vídeo.</p>
+                            <div id="carouselExampleControlsVideo" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imagens produtos/peça para montar.png" alt="Imagem 1 do produto">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens produtos/puzzle didático.png" alt="Imagem 2 do produto">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagens produtos/tabuleiro educacional.png" alt="Imagem 3 do produto">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsVideo" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsVideo" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <!-- Botão de compra via WhatsApp -->
+                            <a href="https://wa.me/SUANUMERO?text=Olá, gostaria de comprar o produto Produto com Slider" class="btn-whatsapp mt-3" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <button class="whatsapp-button" onclick="window.open('https://wa.me/SUANUMERO', '_blank')"></button>
+
+    <!-- Seção de rodapé -->
+    <footer class="footer-section py-4">
+        <div class="container text-center">
+            <p>© 2024 Brinquedos de Madeira. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><img src="imagens sociais/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="imagens sociais/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="imagens sociais/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
