@@ -1,0 +1,17 @@
+Saulo Oliveira
+13/10
+Versão 9.0
+
+1. Modificação no Formulário de Contato
+Substituição do botão "Entre em contato" pelo botão "Enviar", mantendo o estilo visual.
+O formulário agora envia os dados diretamente para o e-mail configurado via mailto:.
+
+2. Reposicionamento do Botão "Entre em Contato"
+O botão foi reposicionado para o canto superior esquerdo da página de contato para melhor visibilidade e acesso.
+
+3. Estilização Personalizada dos Botões
+Aplicação de novos estilos para os botões "Conheça nossos produtos" e "Entre em contato" na seção principal da página inicial.
+Melhorias no design dos botões para destacar a interação do usuário.
+
+4. Ajustes no Layout e Usabilidade
+Ajustes gerais no layout da página para garantir melhor distribuição de conteúdo e responsividade, utilizando flexbox para centralizar os elementos.
