@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante a responsividade da página -->
     <title>Blog - Brinquedos de Madeira</title>
     <!-- Link para o Bootstrap, facilitando a criação de um layout responsivo -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <style>
         /* Identidade visual e imagem de fundo */
         body {
@@ -93,7 +95,7 @@
         }
 
         /* Estilo do rodapé com transparência */
-        .footer-section {
+        .footer-custom {
             background-color: rgba(68, 37, 7, 0.8); /* Cor marrom com transparência */
             color: white;
             padding: 20px 0;
@@ -102,6 +104,7 @@
         .social-icons img {
             margin: 0 10px;
             transition: transform 0.3s ease;
+            position: relative;
         }
 
         .social-icons img:hover {
@@ -113,6 +116,14 @@
             width: 80px;
             height: auto;
             border-radius: 51%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            background-color: #333;
+            
         }
 
         
@@ -149,6 +160,38 @@
             </div>
         </div>
     </nav>
+
+    <!--html do carossel-->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imagens/img carrosel blog.png" class="d-block w-100 img-fluid" alt="Imagem do carrossel">
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/img carrosel blog 3.png" class="d-block w-100 img-fluid" alt="Imagem do carrossel">
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/carrinho de madeira 2000 pixel.webp" class="d-block w-100 img-fluid" alt="Imagem do carrossel">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <!-- Seção do Blog -->
     <section class="blog-section py-5">
@@ -258,8 +301,43 @@ Em resumo, brinquedos de madeira são uma escolha robusta, educativa e sustentá
         </div>
     </div>
 
+<!-- Após o modal da postagem 3, adicione os vídeos do Instagram -->
+<div class="container">
+    <h3 class="text-center mb-4">Conheça um pouco do nosso Instagram.</h3>
+    
+    <div class="row"> <!-- Início do grid -->
+        <!-- Exemplo de vídeo do Instagram (primeiro vídeo) -->
+        <div class="col-md-4 mb-4"> <!-- Coluna de largura md-4 (três vídeos por linha em telas médias ou maiores) -->
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DBBZovnut5m/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14" style="max-width:100%; margin:0 auto;">
+                <a href="https://www.instagram.com/p/CODE_DO_VIDEO/" target="_blank"></a>
+            </blockquote>
+        </div>
 
+        <!-- Exemplo de outro vídeo do Instagram (segundo vídeo) -->
+        <div class="col-md-4 mb-4">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DA_mG1jPnbH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14" style="max-width:100%; margin:0 auto;">
+                <a href="https://www.instagram.com/p/OUTRO_CODE_DO_VIDEO/" target="_blank"></a>
+            </blockquote>
+        </div>
 
+        <!-- Exemplo de outro vídeo do Instagram (terceiro vídeo) -->
+        <div class="col-md-4 mb-4">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C_1JY_svRX4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14" style="max-width:100%; margin:0 auto;">
+                <a href="https://www.instagram.com/p/TERCEIRO_CODE_DO_VIDEO/" target="_blank"></a>
+            </blockquote>
+        </div>
+    </div> <!-- Fim do grid -->
+</div>
+
+<!-- Script do Instagram para carregar os vídeos corretamente -->
+<script async src="//www.instagram.com/embed.js"></script>
+
+ <!-- Rodapé -->
+ <footer class="footer-custom">
+    <p>© 2024 Brinquedos Educativos Especiais. Todos os direitos reservados.</p>
+    <a href="contact.html" class="text-white">Contato</a> | 
+    <a href="https://www.instagram.com/pontoo.luz" class="text-white">Instagram</a> |
+</footer>
     
 
     <!-- Scripts do Bootstrap -->

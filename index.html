@@ -25,11 +25,13 @@
             justify-content: center;
             align-items: center;
             z-index: 9999; /* Garantir que o preloader esteja acima de tudo */
+            
         }
 
         /* Ajusta o tamanho da logo no preloader */
         #preloader img {
             width: 150px;
+            border-radius: 61%;
         }
 
         /* Estilo da seção principal com a imagem de fundo */
@@ -156,7 +158,7 @@
 
         /* Quando o mouse passa por cima do botão */
         .btn-special:hover {
-            background-color: red; /* Cor vermelha ao passar o mouse */
+            background-color: rgb(245, 149, 59); /* Cor vermelha ao passar o mouse */
             color: #fff;
         }
 
@@ -174,7 +176,7 @@
 
         /* Cor azul ao passar o mouse */
         .btn-outline-special:hover {
-            background-color: blue;
+            background-color: rgb(245, 149, 59);
             color: #fff;
         }
 
@@ -195,8 +197,49 @@
             height: auto;
             border-radius: 51%;
         }
+        /* css do botao leia  mas*/
+        /* Estilização para o botão 'Saiba mais...' */
+.btn-leia-mais {
+    background-color: #b87006; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+.btn-leia-mais:hover {
+    background-color: #ebad29; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilização para o rodapé */
+.footer-custom {
+    background-color: #272323; /* Cor de fundo escura */
+    color: rgb(245, 245, 245); /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaçamento interno */
+}
+
+.footer-custom a {
+    color: rgb(250, 250, 250); /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    margin: 0 10px; /* Espaçamento entre os links */
+}
+
+.footer-custom a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.loading{
+    border-radius: 61%;
+}
+
+
 
     </style>
+    
 </head>
 <body class="loading">
     <!-- Preloader: Exibe o logo enquanto o site carrega -->
@@ -333,10 +376,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Rodapé -->
-    <footer>
+    <footer class="footer-custom">
         <p>© 2024 Brinquedos Educativos Especiais. Todos os direitos reservados.</p>
         <a href="contact.html" class="text-white">Contato</a> | 
         <a href="https://www.instagram.com/pontoo.luz" class="text-white">Instagram</a> |
     </footer>
+    <script src="cookies.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    
+
 </body>
 </html>
