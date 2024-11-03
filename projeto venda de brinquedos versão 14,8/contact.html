@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo do corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        /* Estilos do cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo do logo */
+        .logo img {
+            width: 7%;
+            height: 50%;
+            border-radius: 50%;
+        }
+
+        /* Estilos da navegação */
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #ccc;
+            font-weight: 500;
+        }
+
+        /* Estilo do link ativo */
+        nav a.active {
+            color: #007bff;
+        }
+
+        /* Estilo principal da página */
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        /* Estilos do container de contato */
+        .contact-container {
+            display: flex;
+            background-color: #f4ede6;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Seção de imagem */
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 30px;
+        }
+
+        /* Estilo da imagem */
+        .device-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Seção do formulário */
+        .form-section {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        /* Título da seção de contato */
+        .form-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo dos grupos de entrada do formulário */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Estilo dos rótulos */
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Estilo das entradas de texto e textarea */
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Foco nas entradas de texto */
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        /* Estilo do textarea */
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+
+        /* Botão de envio */
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #e94e4e;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Estilo ao passar o mouse sobre o botão de envio */
+        button[type="submit"]:hover {
+            background-color: #d43d3d;
+        }
+
+        /* Estilo dos créditos */
+        .credits {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Estilo dos links de créditos */
+        .credits a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Estilo dos links de créditos ao passar o mouse */
+        .credits a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo do rodapé */
+        .footer-custom {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Estilo dos links no rodapé */
+        .footer-custom a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Estilo dos links ao passar o mouse no rodapé */
+        .footer-custom a:hover {
+            text-decoration: underline;
+        }
+
+        /* Ícones sociais no rodapé */
+        .social-icons img {
+            width: 24px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        .footer-custom p {
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagnes de logo/logo escura marro.webp" alt="Logo da Empresa">
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Produtos</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">Sobre Nós</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <div class="image-section">
+                <img src="imagens/E-mail.webp" alt="Imagem de tablet e telefone" class="device-image">
+            </div>
+            <div class="form-section">
+                <h2>Entre contato pelo nosso WhatsApp</h2>
+                <form id="contactForm" onsubmit="sendWhatsApp(event)">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite um e-mail válido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" placeholder="Digite seu nome" required>
+                    </div>                    
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" placeholder="Digite sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-custom">
+        <p>
+          PONTO LUZ - <a href="https://www.google.com/maps/place/Ponto+luz+brinquedos+educativos/@-20.8231532,-49.4090417,15z/data=!4m6!3m5!1s0x94bdad002d0a4c43:0x3c41387e6c521980!8m2!3d-20.8231532!4d-49.4090417!16s%2Fg%2F11vrs_x405?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ponto-luz</a> - Telefone <a href="tel:+551799208369">(17) 992083569</a>
+        </p>
+        <p>
+          © 2024 Brinquedos Educativos Especiais. <br> 
+          Todos os direitos reservados a Ponto Luz <br> 
+          Desenvolvido por <a href="https://github.com/saulowss123" target="_blank">Saulo Oliveira</a> - 
+          <a href="https://github.com/tiagoazz" target="_blank">Tiago Azevedo</a> - 
+          <a href="https://github.com/ValdineiSateli" target="_blank">Valdinei Sateli</a>.
+        </p>
+        <div class="social-icons">
+          <a href="https://api.whatsapp.com/send/?phone=5517992083569&text&type=phone_number&app_absent=0" target="_blank">
+            <img src="imagnes de logo/1490889687-whats-app_82529.ico" class="img-fluid" alt="WhatsApp">
+          </a>
+          <a href="https://www.instagram.com/pontoo.luz" target="_blank">
+            <img src="imagens/logo2instagram.ico" class="img-fluid" alt="Instagram">
+          </a>
+        </div>
+    </footer>
+
+    <script>
+        function sendWhatsApp(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const name = document.getElementById("name").value;
+            const address = document.getElementById("address").value;
+            const message = document.getElementById("message").value;
+
+            const whatsappMessage = `Nome: ${name}%0AEmail: ${email}%0AEndereço: ${address}%0AMensagem: ${message}`;
+            const whatsappLink = `https://api.whatsapp.com/send/?phone=5517992083569&text&type=phone_number&app_absent=0${whatsappMessage}`;
+
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+</body>
+</html>
