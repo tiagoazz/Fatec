@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante a responsividade da página -->
+    <title>Sobre Nós - Brinquedos de Madeira</title>
+    <!-- Link para o Bootstrap, facilitando a criação de um layout responsivo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para a fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="16x16" href="imagnes de logo/logo morro  claro.jpg">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin: 0;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-image: url('imagens/img2parte.jpeg'); /* Substitua pelo caminho da imagem escolhida */
+            transition: background 0.5s ease;
+        }
+
+        /* Navbar estilizada */
+        .navbar-custom {
+            background-color: #343a40; /* Cor padrão do navbar */
+        }
+
+        /* Estilo da logo */
+        .navbar-brand img {
+            max-height: 60px;
+            height: auto;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        /* Estilos para os links do menu de navegação */
+        .navbar-nav a {
+            color: rgb(234, 165, 4); /* Cor dos links */
+            margin-right: 15px; /* Espaçamento entre os links */
+            text-decoration: none; /* Remove o sublinhado */
+            font-weight: bold;
+            transition: color 0.3s ease; /* Adiciona transição suave na cor */
+        }
+
+        /* Efeito ao passar o mouse sobre os links do menu */
+        .navbar-nav a:hover {
+            color: rgb(255, 255, 255); /* Muda somente a cor da letra */
+        }
+
+        /* Destaque para o item ativo */
+        .navbar .nav-link.active {
+            color: #f0c14b;
+        }
+
+        /* Estilo do botão toggle no modo responsivo */
+        .navbar-toggler {
+            border-color: #f0c14b;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='https://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(240,193,75,0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        /* Estilo para as divs com sombra */
+        .shadow-box {
+            box-shadow: 0px 4px 15px rgba(220, 6, 6, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .shadow-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Seção Sobre Nós */
+        .about-section {
+            background-color: #70924ca9;
+            color: white;
+            padding: 60px 20px;
+            text-align: justify;
+            border-radius: 10px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+        }
+
+        /* Depoimentos */
+        .testimonials-section {
+            background-color: #70924ca9;
+            padding: 60px 20px;
+        }
+
+        .testimonial {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial .rating {
+            color: #F2C12E;
+            font-size: 20px;
+        }
+
+        .testimonial p {
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .testimonial .customer {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Seção Institucional */
+        .institutional-section {
+            background-color: rgba(232, 227, 223, 0.9);
+            padding: 60px 20px;
+            border-radius: 10px;
+            color: rgb(3, 3, 3);
+            text-align: justify;
+        }
+
+        .institutional-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .institutional-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .about-section p, .institutional-section p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Dimensão do carrossel */
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            background-color: #555;
+        }
+
+        /* Estilo para centralizar o post do Instagram */
+        .instagram-post {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        /* Título "Siga nosso Instagram" destacado e imagem adicional */
+        .additional-image p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ab6400;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .additional-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Botão flutuante do WhatsApp no canto inferior direito */
+        /* Estilos para o botão flutuante do WhatsApp */
+.float {
+   position: fixed;
+   width: 30px;
+   height: 60px;
+   bottom: 40px;
+   right: 40px;
+  
+   border-radius: 50px;
+   text-align: center;
+   font-size: 30px;
+   z-index: 100;
+   /* Alinha o ícone dentro do botão */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ /* Estilo do ícone dentro do botão flutuante */
+ .float img {
+   width: 71px;
+   height: 71px;
+ }
+
+ /* Estilos do navbar */
+ .navbar-custom {
+   background-color: #343a40; /* Cor padrão do navbar */
+   /* Removido height para permitir responsividade */
+ }
+
+ /* Ajuste do tamanho da logo no navbar */
+ .navbar-brand img {
+   width: 60px;
+   height: auto;
+   border-radius: 50%;
+ }
+
+        /* Estilo do rodapé */
+        .footer-custom {
+  background-color: #ab6400;
+  color: rgb(245, 245, 245);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-custom a {
+  color: rgb(245, 245, 245);
+  text-decoration: none;
+}
+
+.footer-custom a:hover {
+  text-decoration: underline;
+}
+
+.footer-custom .social-icons {
+  margin-top: 10px;
+}
+
+.footer-custom .social-icons a {
+  margin: 0 10px;
+}
+
+.footer-custom .social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.instagram-post {
+    padding: 10px;
+}
+
+.row .col-md-6 img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 15px;
+}
+
+/* Estilo para a coluna de informações */
+.col-md-6 {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; /* Cor de fundo leve */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o texto geral */
+.col-md-6 p {
+    color: #333; /* Cor de texto padrão */
+    line-height: 1.6;
+    margin: 0;
+}
+
+.col-md-6 p span {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Estilo para o nome do perfil */
+.col-md-6 p:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #222;
+}
+
+/* Estilo para o número de seguidores e publicações */
+.col-md-6 p:nth-child(1) span {
+    color: #0073e6; /* Cor para os números */
+}
+
+/* Estilo para o texto descritivo */
+.col-md-6 p:nth-child(2),
+.col-md-6 p:nth-child(3),
+.col-md-6 p:nth-child(4),
+.col-md-6 p:nth-child(5) {
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+}
+
+/* Adiciona ícones aos itens */
+.col-md-6 p:nth-child(5)::before {
+    content: "📦 ";
+    margin-right: 5px;
+}
+
+.col-md-6 p:nth-child(6)::before {
+    content: "🛒 ";
+    margin-right: 5px;
+}
+
+.col-md-6 p:nth-child(7)::before {
+    content: "💬 ";
+    margin-right: 5px;
+}
+
+
+    </style>
+
+</head>
+<body>
+
+   
+  
+ 
+ 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagnes de logo/logo morro  claro.jpg" alt="Logo Brinquedos de Madeira">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Ícone do toggle destacado -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Sobre Nós -->
+    <section class="about-section shadow-box">
+        <div class="container">
+            <h2 class="text-center mb-5">Sobre Nós</h2>
+            <p>Somos especialistas em brinquedos de madeira artesanais, focados em promover o desenvolvimento infantil de maneira sustentável e educativa. Nossos produtos são feitos à mão com todo o cuidado, usando materiais de alta qualidade, para garantir a segurança e a satisfação de nossos pequenos clientes e suas famílias.</p>
+        </div>
+    </section>
+
+    <!-- Carrossel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imagens/img carrosel blog.png" class="d-block w-100" alt="Imagem do carrossel">
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/img carrosel blog 2.png" class="d-block w-100" alt="Imagem do carrossel">
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/fundo site escuro.webp" class="d-block w-100" alt="Imagem do carrossel">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    <!-- Seção de Instagram -->
+  
+    <section class="container d-flex align-items-center">
+        <!-- Imagem e Título alinhados lado a lado -->
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center">
+                <h1 class="me-3">Um pouco da nossa trajetória</h1>
+                <img src="imagens/tela do insta.png" alt="Imagem de brinquedos" class="img-fluid" style="max-width: 200px;">
+            </div>
+        </div>
+        
+        <!-- Post do Instagram e espaço para informações adicionais -->
+        <div class="row mt-4">
+            <div class="col-md-6 instagram-post">
+                <!-- Embedding Instagram Post -->
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C9e9pw6uc__/" data-instgrm-version="14" style="max-width:100%; margin:0 auto;">
+                    <a href="https://www.instagram.com/p/C9e9pw6uc__/" target="_blank"></a>
+                </blockquote>
+                <script async src="//www.instagram.com/embed.js"></script>
+            </div>
+    
+            <!-- Coluna vazia para informações adicionais -->
+            <div class="col-md-6">
+                <p>pontoo.luz
+                    764 publicações
+                    2.359 seguidores
+                    819 seguindo
+                    Ponto Luz Brinquedos educativos
+                    @camilacabral.edparental
+                    Reviva sua infância com seu filho(a)😍
+                    Loja online😉
+                    Atendimento personalizado💙
+                    Levamos até você nossos brinquedos😉</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Seção de Depoimentos -->
+    <section class="testimonials-section shadow-box">
+        <div class="container">
+            <h2 class="text-center mb-5">O que nossos clientes estão dizendo</h2>
+
+            <div class="testimonial">
+                <div class="rating">
+                    <p>★★★★★</p>
+                </div>
+                <p>"Os brinquedos de madeira são incríveis! Meu filho adora o balanço de carrinho, e noto como ele desenvolveu mais equilíbrio e coordenação."</p>
+                <span class="customer">- Maria Oliveira</span>
+            </div>
+
+            <div class="testimonial">
+                <div class="rating">
+                    <p>★★★★★</p>
+                </div>
+                <p>"A qualidade dos brinquedos é excelente e saber que são feitos à mão com materiais sustentáveis me faz sentir ainda melhor sobre a compra."</p>
+                <span class="customer">- João Silva</span>
+            </div>
+
+            <div class="testimonial">
+                <div class="rating">
+                    <p>★★★★★</p>
+                </div>
+                <p>"Comprei o kit de blocos de montar para minha filha e ela passa horas brincando. Ótima compra!"</p>
+                <span class="customer">- Ana Pereira</span>
+            </div>
+
+            <div class="testimonial">
+                <div class="rating">
+                    <p>★★★★★</p>
+                </div>
+                <p>"Brinquedos de alta qualidade, com ótimo acabamento. Eu comprei para meus sobrinhos e eles amaram."</p>
+                <span class="customer">- Carlos Andrade</span>
+            </div>
+        </div>
+    </section>
+     <!-- Botão flutuante do WhatsApp -->
+ <a href="https://api.whatsapp.com/send/?phone=5517992083569&text&type=phone_number&app_absent=0" class="float" target="_blank">
+    <img src="imagnes de logo/1490889687-whats-app_82529.ico" alt="WhatsApp">
+  </a>
+
+   
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script do Instagram para carregar os vídeos corretamente -->
+    <script async src="//www.instagram.com/embed.js"></script>
+
+</body>
+ <!-- Rodapé -->
+ <footer class="footer-custom">
+    <p>
+        PONTO LUZ - <a href="https://www.google.com/maps/place/Rua+Armelindo+Buriola,+4205+-+Jardim+Alto+Rio+Preto,+S%C3%A3o+Jos%C3%A9+do+Rio+Preto+-+SP,+15020-380/@-20.8231836,-49.4089638,17z/data=!3m1!4b1!4m6!3m5!1s0x94bdad810cb33145:0xe4f126e6ebda48a2!8m2!3d-20.8231836!4d-49.4089638!16s%2Fg%2F11csc9xmwv?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Rua Armelindo Buriola, 4205 - Jardim Alto Rio Preto, São José do Rio Preto - SP, 15020-380</a> - Telefone <a href="tel:+5517988157556">(17) 992083569</a>
+         
+      © 2024 Brinquedos Educativos Especiais. Todos os direitos reservados a Ponto Luz - Desenvolvido por
+      <a href="https://github.com/saulowss123" target="_blank">Saulo Oliveira</a> -
+      <a href="https://github.com/tiagoazz" target="_blank">Tiago Azevedo</a> -
+      <a href="https://github.com/ValdineiSateli" target="_blank">Valdinei Sateli</a>.
+    </p>
+    <div class="social-icons">
+      <a href="https://api.whatsapp.com/send/?phone=5517992083569&text&type=phone_number&app_absent=0" target="_blank">
+        <img src="imagnes de logo/1490889687-whats-app_82529.ico" class="img-fluid" alt="WhatsApp" />
+      </a>
+      <a href="contact.html">
+        <img src="imagens/iconecontato.ico" class="img-fluid" alt="Contato" />
+      </a>
+      <a href="https://www.instagram.com/pontoo.luz" target="_blank">
+        <img src="imagens/logo2instagram.ico" class="img-fluid" alt="Instagram" />
+      </a>
+    </div>
+  </footer>
+</html>

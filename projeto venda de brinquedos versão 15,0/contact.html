@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagnes de logo/logo morro claro.jpg">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100%; margin: 0; font-family: 'Poppins', sans-serif; background-color: #f2f2f2; color: #333; }
+        .navbar-custom { background-color: #343a40; color: #fff; }
+        .navbar-brand img { width: 7%; height: auto; border-radius: 50%; cursor: pointer; }
+        .navbar-nav .nav-link { color: rgb(234, 165, 4); font-weight: bold; transition: color 0.3s ease; }
+        .navbar-nav .nav-link:hover { color: #fff; }
+        .navbar-toggler { border-color: rgba(255, 255, 255, 0.5); }
+        main { display: flex; justify-content: center; padding: 40px; }
+        .contact-container { display: flex; background-color: #f4ede6; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .image-section { flex: 1; display: flex; justify-content: center; align-items: center; padding-right: 30px; }
+        .device-image { max-width: 100%; height: auto; border-radius: 8px; opacity: 0.3; }
+        .form-section { flex: 1; max-width: 400px; }
+        .form-section h2 { font-size: 32px; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #007bff; }
+        button[type="submit"] { width: 100%; padding: 10px; font-size: 18px; font-weight: bold; color: #fff; background-color: #e94e4e; border: none; border-radius: 4px; cursor: pointer; }
+        button[type="submit"]:hover { background-color: #d43d3d; }
+        .float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; border-radius: 50px; background-color: rgba(37, 211, 102, 0.9); color: white; display: flex; justify-content: center; align-items: center; transition: background-color 0.3s ease; }
+        .float:hover { background-color: rgba(18, 140, 126, 0.9); }
+        .float img { width: 40px; height: 40px; }
+        .footer-custom { background-color: #ab6400; color: #f5f5f5; text-align: center; padding: 20px 0; }
+        .footer-custom a { color: #f5f5f5; text-decoration: none; }
+        .footer-custom a:hover { text-decoration: underline; }
+        .footer-custom .social-icons img { width: 24px; height: 24px; transition: transform 0.3s ease; }
+        .footer-custom .social-icons img:hover { transform: scale(1.1); }
+        @media (max-width: 768px) { .contact-container { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagnes de logo/logo morro  claro.jpg" alt="Logo da Empresa">
+            </a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="contact-container">
+            <div class="image-section">
+                <img src="imagens/E-mail.webp" alt="Imagem de tablet e telefone" class="device-image">
+            </div>
+            <div class="form-section">
+                <h2>Entre em contato pelo nosso WhatsApp</h2>
+                <form id="contactForm" onsubmit="sendWhatsApp(event)">
+                    <div class="form-group">
+                        <label for="clientNumber">Número do Cliente</label>
+                        <input type="text" id="clientNumber" placeholder="Digite seu número" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" placeholder="Digite seu nome" required>
+                    </div>                    
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" placeholder="Digite sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div class="float" onclick="sendWhatsApp(event)">
+        <img src="imagnes de logo/1490889687-whats-app_82529.ico" alt="WhatsApp" />
+    </div>
+
+    <script>
+        function sendWhatsApp(event) {
+            event.preventDefault();
+            const clientNumber = document.getElementById("clientNumber").value;
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+            const whatsappMessage = `Atendimento Ponto Luz - Nome: ${name}%0ANúmero: ${clientNumber}%0AMensagem: ${message}`;
+            const whatsappLink = `https://api.whatsapp.com/send/?phone=5517992083569&text=${whatsappMessage}&type=phone_number&app_absent=0`;
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+
+    <footer class="footer-custom">
+        <p>
+          PONTO LUZ - <a href="https://www.google.com/maps/place/Rua+Armelindo+Buriola,+4205+-+Jardim+Alto+Rio+Preto,+São+José+do+Rio+Preto+-+SP,+15020-380" target="_blank">Rua Armelindo Buriola, 4205 - Jardim Alto Rio Preto, São José do Rio Preto - SP, 15020-380</a> - Telefone <a href="tel:+5517988157556">(17) 992083569</a>
+        </p>
+        <p>
+          © 2024 Brinquedos Educativos Especiais. Todos os direitos reservados a Ponto Luz - Desenvolvido por
+          <a href="https://github.com/saulowss123" target="_blank">Saulo Oliveira</a> -
+          <a href="https://github.com/tiagoazz" target="_blank">Tiago Azevedo</a> -
+          <a href="https://github.com/ValdineiSateli" target="_blank">Valdinei Sateli</a>.
+        </p>
+        <div class="social-icons">
+          <a href="https://api.whatsapp.com/send/?phone=5517992083569&text&type=phone_number&app_absent=0" target="_blank">
+            <img src="imagnes de logo/1490889687-whats-app_82529.ico" class="img-fluid" alt="WhatsApp" />
+          </a>
+          <a href="contact.html">
+            <img src="imagens/iconecontato.ico" class="img-fluid" alt="Contato" />
+          </a>
+          <a href="https://www.instagram.com/pontoo.luz" target="_blank">
+            <img src="imagens/logo2instagram.ico" class="img-fluid" alt="Instagram" />
+          </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
